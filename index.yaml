@@ -21,6 +21,6 @@ entries:
       url: https://github.com/hiyali
     name: superset
     urls:
-    - https://github.com/Yodo1Games/Yodo1-Helm-Charts/releases/download/superset-helm-chart-0.6.5/superset-0.6.5.tgz
+    - https://github.com/Yodo1Games/charts/releases/download/superset-helm-chart-0.6.5/superset-0.6.5.tgz
     version: 0.6.5
 generated: "2022-04-30T17:36:17.341229936Z"
