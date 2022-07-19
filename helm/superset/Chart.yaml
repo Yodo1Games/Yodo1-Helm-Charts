@@ -22,10 +22,10 @@ maintainers:
   - name: Salam Hiyali
     email: salam@yodo1.com
     url: https://github.com/hiyali
-version: 0.6.6
+version: 0.7.0
 dependencies:
 - name: postgresql
-  version: 10.2.0
+  version: 11.1.22
   repository: https://charts.bitnami.com/bitnami
   condition: postgresql.enabled
 - name: redis

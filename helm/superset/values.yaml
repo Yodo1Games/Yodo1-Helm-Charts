@@ -162,7 +162,7 @@ extraConfigMountPath: "/app/configs"
 
 image:
   repository: apache/superset
-  tag: 1.5.1
+  tag: 2.0.0
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
