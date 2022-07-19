@@ -22,7 +22,7 @@ maintainers:
   - name: Salam Hiyali
     email: salam@yodo1.com
     url: https://github.com/hiyali
-version: 0.6.5
+version: 0.6.6
 dependencies:
 - name: postgresql
   version: 10.2.0
