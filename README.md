@@ -20,3 +20,10 @@ apache/superset:2.0.0
   repository       = "https://yodo1games.github.io/charts"
   version          = "0.7.0"
 ```
+
+apache/superset:3.0.0
+```yaml
+  name             = "superset"
+  repository       = "https://yodo1games.github.io/charts"
+  version          = "0.10.15"
+```
