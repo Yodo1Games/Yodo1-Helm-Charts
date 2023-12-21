@@ -47,6 +47,28 @@ entries:
     version: 0.10.15
   - apiVersion: v2
     appVersion: "1.0"
+    created: "2023-12-21T04:20:23.907440893Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.13.2
+    description: Yodo1 customized Superset Helm Chart repo
+    digest: 14927291f68ca0a709a525c4f1309ca2f869a1f2d8e5e281c0b40f7696fb36de
+    maintainers:
+    - email: yuyiwei@yodo1.com
+      name: Vision Yu
+      url: https://github.com/hiyali
+    name: superset
+    urls:
+    - https://github.com/Yodo1Games/charts/releases/download/superset-helm-chart-0.10.0/superset-0.10.0.tgz
+    version: 0.10.0
+  - apiVersion: v2
+    appVersion: "1.0"
     created: "2022-07-19T08:49:19.930185715Z"
     dependencies:
     - condition: postgresql.enabled
@@ -89,4 +111,4 @@ entries:
     urls:
     - https://github.com/Yodo1Games/charts/releases/download/superset-helm-chart-0.6.5/superset-0.6.5.tgz
     version: 0.6.5
-generated: "2023-12-21T04:07:45.833343512Z"
+generated: "2023-12-21T04:20:23.907456762Z"
