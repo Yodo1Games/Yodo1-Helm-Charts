@@ -17,20 +17,34 @@
 
 */}}
 
-{{- if .Values.extraConfigs }}
+{{- if .Values.supersetCeleryFlower.enabled }}
 apiVersion: v1
-kind: ConfigMap
+kind: Service
 metadata:
-  name: {{ template "superset.fullname" . }}-extra-config
+  name: "{{ template "superset.fullname" . }}-flower"
   namespace: {{ .Release.Namespace }}
   labels:
     app: {{ template "superset.name" . }}
     chart: {{ template "superset.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
-data:
-  {{- range $path, $config := .Values.extraConfigs }}
-  {{ $path }}: |
-    {{- tpl $config $ | nindent 4 -}}
-  {{- end -}}
-{{- end -}}
+  {{- with .Values.supersetCeleryFlower.service.annotations }}
+  annotations: {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+  type: {{ .Values.supersetCeleryFlower.service.type }}
+  ports:
+    - port: {{ .Values.supersetCeleryFlower.service.port }}
+      targetPort: flower
+      protocol: TCP
+      name: flower
+      {{- if and (or (eq .Values.supersetCeleryFlower.service.type "NodePort") (eq .Values.supersetCeleryFlower.service.type "LoadBalancer")) (not (empty .Values.supersetCeleryFlower.service.nodePort.http)) }}
+      nodePort: {{ .Values.supersetCeleryFlower.service.nodePort.http }}
+      {{- end }}
+  selector:
+    app: {{ template "superset.name" . }}-flower
+    release: {{ .Release.Name }}
+  {{- if .Values.supersetCeleryFlower.service.loadBalancerIP }}
+  loadBalancerIP: {{ .Values.supersetCeleryFlower.service.loadBalancerIP }}
+  {{- end }}
+{{- end }}
