@@ -22,7 +22,7 @@ maintainers:
   - name: Vision Yu
     email: yuyiwei@yodo1.com
     url: https://github.com/hiyali
-version: 0.10.16
+version: 0.10.0
 dependencies:
 - name: postgresql
   version: 11.9.13
