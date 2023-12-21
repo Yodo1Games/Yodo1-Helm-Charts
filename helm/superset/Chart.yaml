@@ -19,10 +19,10 @@ appVersion: "1.0"
 description: Yodo1 customized Superset Helm Chart repo
 name: superset
 maintainers:
-  - name: Salam Hiyali
-    email: salam@yodo1.com
+  - name: Vision Yu
+    email: yuyiwei@yodo1.com
     url: https://github.com/hiyali
-version: 0.10.15
+version: 0.10.16
 dependencies:
 - name: postgresql
   version: 11.9.13
