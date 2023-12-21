@@ -715,7 +715,7 @@ postgresql:
     database: superset
 
   image:
-    tag: "14.6.0-debian-11-r13"
+    tag: "bitnami/postgresql:11.10.0-debian-10-r85"
 
   ## PostgreSQL Primary parameters
   primary:
